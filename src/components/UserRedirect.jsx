@@ -40,7 +40,7 @@ function UserRedirect() {
         return(<Navigate to="/login" />)
     }
     if(logged){
-        return(<Navigate to="/game" />)
+        return(<Navigate to="/home" />)
     }
     else{
         setTimeout(function(){

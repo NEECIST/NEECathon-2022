@@ -7,7 +7,7 @@ import { Navigate } from "react-router-dom"
 
 function Login() {
     if(supabaseClient.auth.user()){
-      return(<Navigate to="/game" />)
+      return(<Navigate to="/home" />)
     }else{
       return (
         <Container className="text-center">

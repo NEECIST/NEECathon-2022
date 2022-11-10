@@ -10,6 +10,7 @@ const ProfileServices = {
         throw error;
       }
       if (data) {
+        console.log(data, "Teste");
         if (data.length !== 1) {
           setAdmin(true);
         } else {
@@ -28,6 +29,7 @@ const ProfileServices = {
         throw error;
       }
       if (data) {
+        console.log(data, "Teste1");
         setTeam(data);
       }
     } catch (error) {
@@ -43,6 +45,8 @@ const ProfileServices = {
         throw error;
       }
       if (data) {
+        
+        console.log(data, "Teste2");
         setTeamMembers(data);
       }
     } catch (error) {
@@ -179,7 +183,7 @@ const ProfileServices = {
 
   changeImage: function (imageURL, setModal) {
     axios
-      .post("http://backend.neecist.xyz/changeImage", {
+      .post("http://localhost:5000/changeImage", {
         token: supabaseClient.auth.currentSession.access_token,
         imageURL: imageURL,
       })
@@ -193,7 +197,7 @@ const ProfileServices = {
   transferCoins: function (teamGivingId, teamRecievingId, Amount) {
     if (Amount.length) {
       axios
-        .post("http://backend.neecist.xyz/transferCoins", {
+        .post("http://localhost:5000/transferCoins", {
           token: supabaseClient.auth.currentSession.access_token,
           minusTeam: teamGivingId,
           plusTeam: teamRecievingId,

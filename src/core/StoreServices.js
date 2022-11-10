@@ -10,6 +10,8 @@ const StoreService = {
         throw error;
       }
       if (data) {
+        console.log(data.join("").toString());
+
         data = data.flatMap(function (item) {
           if (item.STOCK === 0) {
             return [];
@@ -36,7 +38,7 @@ const StoreService = {
   },
   buyComponents: async function (cart, setModalText) {
     axios
-      .post("http://backend.neecist.xyz/buy", {
+      .post("http://localhost:5000/buy", {
         itemList: cart,
         token: supabaseClient.auth.currentSession.access_token,
       })
@@ -69,7 +71,7 @@ const StoreService = {
       quantity: quantity,
     };
     axios
-      .post("http://backend.neecist.xyz/requestComponent", {
+      .post("http://localhost:5000/requestComponent", {
         componentObject: obj,
         token: supabaseClient.auth.currentSession.access_token,
       })

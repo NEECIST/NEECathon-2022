@@ -1,7 +1,7 @@
 import './index.css'
 import React from 'react'
 import { Routes, Route } from "react-router-dom";
-import GamePage from './pages/GamePage'
+import HomePage from './pages/HomePage'
 import ErrorPage from './pages/ErrorPage'
 import ShopPage from './pages/ShopPage'
 import LoginPage from './pages/LoginPage'
@@ -14,7 +14,7 @@ export default function App() {
           <Route path="/" element={<LoginPage />} />
           <Route path="/redirecting" element={<UserRedirectPage />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/game" element={<GamePage />} />
+          <Route path="/home" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="*" element={<ErrorPage />} />
@@ -22,5 +22,4 @@ export default function App() {
     )
 }
 
-//https://gahraycocamnovpvaatg.supabase.co/auth/v1/callback
 

@@ -6,7 +6,6 @@ import supabaseClient from "../utils/supabaseClient";
 import { Navigate, useLocation } from "react-router-dom"
 import {CSVDownload} from "react-csv";
 import ProfileServices from "../core/ProfileServices";
-import GameServices from "../core/GameServices";
 
 function Profile() {
     let location = useLocation()
@@ -30,7 +29,6 @@ function Profile() {
         ProfileServices.getTeamComponents(setTeamComponents)
         ProfileServices.getTeamHouses(setTeamHouses)
         ProfileServices.getAllComponents(setAllComponents);
-        GameServices.getTeams(setTeams);
     },[])
     
 function componentsList() {
