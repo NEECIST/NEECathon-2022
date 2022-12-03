@@ -1,0 +1,43 @@
+.priceBlob {
+    position: absolute;
+    right: 1.8rem;
+    top: 1.5rem;
+    background-color: #09013b;
+    color: white;
+    border: 3px solid #1be8bb;
+    padding: 5px;
+    border-radius: 10px;
+    line-height: 0;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.priceBlob>diV {
+    padding: 0 5px;
+}
+
+.componentCard {
+    border-radius: 10;
+    padding: 1rem;
+    width: 16vw;
+    max-width: 16vw;
+    min-width: 235px;
+    max-height: 420px;
+    min-height: 420px;
+    background-color: #0f083c;
+    box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.37);
+}
+
+.componentCard .card-title {
+    height: 100%;
+    font-size: 1.4rem;
+}
+
+.componentImage {
+    object-fit: contain;
+    height: 20vh;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 2vh;
+}

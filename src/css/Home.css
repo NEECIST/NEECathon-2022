@@ -1,0 +1,314 @@
+body {
+    overflow: hidden
+}
+
+h2 {
+    color: white;
+}
+
+h4 {
+    color: #e7adfc;
+    font-size: large;
+}
+
+a:hover {
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(0deg, #1CE8BB, #EFABFF);
+    border: 0px none #ffffff;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #000000;
+}
+
+::-webkit-scrollbar-track {
+    background: #09013b;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #666666;
+}
+
+::-webkit-scrollbar-track:active {
+    background: #333333;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+.scheduleCol {
+    max-width: 40vw;
+    margin-right: 3vw;
+}
+
+.scheduleCol .card {
+    box-shadow: 0 0 10px 2px #ffb7ff;
+}
+
+.schedule svg {
+    width: 50vw;
+}
+
+.teamButton {
+    background-color: transparent !important;
+    border: 3px solid #999;
+    position: relative;
+    display: flex;
+    align-items: center;
+    animation-duration: 2s;
+    color: white;
+    padding: 1rem;
+    font-size: larger;
+    font-weight: bold;
+    width: 80%;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.teamButton:hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    padding: 3px;
+    background: linear-gradient(150deg, #1CE8BB, #EFABFF) border-box;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+}
+
+.teamButton:hover {
+    border-color: transparent !important;
+}
+
+
+.teamsGrid {
+    margin-top: 1vh;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 7px;
+    justify-items: center;
+}
+
+.iconBoxes {
+    width: fit-content;
+    height: fit-content;
+    display: inline-block !important;
+    color: white !important;
+}
+
+.iconSpan {
+    width: 100%;
+    filter: blur(12px);
+    background-color: #1CE8BB;
+    height: 10%;
+
+}
+
+.mainContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 94vh;
+}
+
+
+
+.mainContainer div.inv {
+    opacity: 0;
+}
+
+.linePart1 {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 0 5vw;
+    align-items: flex-end;
+
+}
+
+.linePart1 .topLine {
+    width: 7px;
+    height: 25%;
+    margin-bottom: 15px;
+    margin-right: 11px;
+    border-radius: 0 0 50px 50px;
+    background: linear-gradient(0, white, #2de3c0, hsl(161deg 68% 10%));
+    box-shadow: 0 0 5px 2px #38e0c4;
+}
+
+.linePart1 .bottomLine {
+    width: 7px;
+    height: 100%;
+    margin-top: 15px;
+    margin-right: 11px;
+    border-radius: 50px 50px 0 0;
+    background: linear-gradient(180deg, white 0%, #2de3c0 90%);
+    box-shadow: 0 0 5px 2px #38e0c4;
+}
+
+.linePart2 {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 0 5vw;
+    align-items: flex-end;
+
+}
+
+.linePart2 .topLine {
+    width: 7px;
+    height: 25%;
+    margin-bottom: 15px;
+    margin-right: 11px;
+    border-radius: 0 0 50px 50px;
+    background: linear-gradient(0, white, #2de3c0);
+    box-shadow: 0 0 5px 2px #38e0c4;
+}
+
+.linePart2 .bottomLine {
+    width: 7px;
+    height: 100%;
+    margin-top: 15px;
+    margin-right: 11px;
+    border-radius: 50px 50px 0 0;
+    background: linear-gradient(180deg, white 0%, #2de3c0 90%);
+    box-shadow: 0 0 5px 2px #38e0c4;
+}
+
+.linePart2 svg {
+    filter: invert(1);
+}
+
+.linePart3 {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 0 5vw;
+    align-items: flex-end;
+
+}
+
+.linePart3 .topLine {
+    width: 7px;
+    height: 25%;
+    margin-bottom: 15px;
+    margin-right: 11px;
+    border-radius: 0 0 50px 50px;
+    background: linear-gradient(0, white, #2de3c0);
+    box-shadow: 0 0 5px 2px #38e0c4;
+}
+
+.linePart3 .bottomLine {
+    width: 7px;
+    height: 100%;
+    margin-top: 15px;
+    margin-right: 11px;
+    border-radius: 50px 50px 0 0;
+    background: linear-gradient(180deg, white 0%, #2de3c0 90%);
+    box-shadow: 0 0 5px 2px #38e0c4;
+}
+
+.linePart4 svg {
+    padding-top: 2vh;
+}
+
+
+.galleryBox {
+    width: 87vw;
+    height: 36vh;
+    background-color: hsl(248deg 92% 7%);
+    margin-left: 10vw;
+    border-radius: 12px;
+    box-shadow: 0px 0 12px 1px #38e0c4;
+    z-index: 1;
+    padding-block: 1.5vh;
+    padding-inline: 1.5vw;
+    min-height: 330px;
+    max-height: 36vh;
+}
+
+.extender {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 0 5vw;
+    align-items: flex-end;
+    height: 3vh;
+}
+
+.extender .line {
+    width: 7px;
+    height: 100%;
+    margin-left: 11px;
+    background-color: #38e0c4;
+    box-shadow: 0 0 5px 2px #38e0c4;
+}
+
+.fade-in-bck {
+    -webkit-animation: fade-in-bck 0.8s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    animation: fade-in-bck 0.8s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-11-27 11:59:40
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-in-bck
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-in-bck {
+    0% {
+        -webkit-transform: translateZ(80px);
+        transform: translateZ(80px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-bck {
+    0% {
+        -webkit-transform: translateZ(80px);
+        transform: translateZ(80px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}

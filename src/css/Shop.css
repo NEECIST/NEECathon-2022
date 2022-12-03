@@ -1,0 +1,204 @@
+.shopSideCard {
+    display: flex;
+    flex-direction: column;
+    background: rgb(9, 1, 59);
+    background: linear-gradient(180deg, rgba(9, 1, 59, 1) 51%, rgba(54, 36, 98, 1) 100%);
+    height: 100%;
+    padding: 1vw;
+    border-Radius: 12pt;
+}
+
+.shopButtons {
+    flex: 1;
+    display: flex;
+    flex-direction: initial;
+    align-items: flex-start;
+}
+
+
+
+.shopButtons button {
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 9px;
+    font-size: larger;
+    color: white;
+}
+
+.shopButtons button.request {
+    flex: 3 1 0%;
+    margin-right: 22px;
+}
+
+.shopButtons button.request:hover {
+    background-color: #1CE8BB;
+}
+
+.shopButtons button.cart {
+    flex: 1 1 0%;
+}
+
+.shopButtons button.cart:hover {
+    background-color: #f48ee5;
+}
+
+.searchBar {
+    flex: 0.7 1 0%;
+    display: flex;
+    align-items: center;
+    border: medium solid white;
+    border-radius: 9px;
+    color: white;
+    padding-inline: 1vw;
+    margin-bottom: 2vw;
+}
+
+.searchIcon {
+    height: 26px;
+    filter: invert(1);
+    padding-right: 10px;
+}
+
+.searchInput {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: larger;
+    width: 100%;
+}
+
+.searchInput::after {}
+
+.searchInput::placeholder {
+    border: 0px;
+    color: white;
+}
+
+.filterBox:checked {
+    background: #1CE8BB;
+}
+
+.filterLabel {
+    color: white;
+    font-size: large;
+    margin-bottom: 0.5vh;
+    margin-left: 1vw;
+    text-transform: capitalize;
+}
+
+.shopBudget {
+    flex: 0.6 1 0%;
+    display: flex;
+    flex-direction: row;
+    padding-inline: 1vw;
+    align-items: center;
+    color: white;
+    font-size: larger;
+    margin-bottom: 1vw;
+}
+
+.shopCoinIcon {
+    line-height: 0;
+    height: 1.4rem;
+    margin-right: 10px;
+}
+
+.horizontalLine {
+    height: 2px;
+    border-radius: 5px;
+    width: 95%;
+    align-self: center;
+    background-Color: #ffb7ff;
+    margin-block: 1rem;
+}
+
+.b-contain *,
+.b-contain *::before,
+.b-contain *::after {
+    box-sizing: content-box !important;
+}
+
+.b-contain input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.b-contain span {
+    line-height: 1.5;
+    font-size: 1rem;
+    font-family: inherit;
+    color: white;
+    text-transform: capitalize;
+}
+
+.b-contain {
+    display: table;
+    position: relative;
+    padding-left: 2rem;
+    cursor: pointer;
+    margin-bottom: 0.4rem;
+    margin-left: 1rem;
+}
+
+.b-contain input[type="checkbox"]~.b-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+    background: #f1f5f9;
+    transition: background 250ms;
+    border: 1px solid #94a3b8;
+    border-radius: 0.2rem;
+}
+
+.b-contain input[type="checkbox"]~.b-input::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 3px;
+    width: 0.3rem;
+    height: 0.6rem;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transition: background 250ms;
+    transform: rotate(45deg);
+}
+
+
+.b-contain input[type="checkbox"]:disabled~.b-input::after {
+    border-color: #ffffff;
+}
+
+.b-contain input:checked~.b-input::after {
+    display: block;
+}
+
+.b-contain input:focus~.b-input {
+    box-shadow: 0 0 0 2px #16deb4;
+}
+
+.b-contain input[type="checkbox"]:checked~.b-input {
+    background: #1be8bb;
+    border-color: #11ddb1;
+}
+
+.b-contain input[type="checkbox"]:disabled~.b-input {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media screen and (max-width: 1525px) {
+
+    .shopButtons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .shopButtons button.request {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+}

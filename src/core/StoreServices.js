@@ -38,7 +38,7 @@ const StoreService = {
   },
   buyComponents: async function (cart, setModalText) {
     axios
-      .post("http://localhost:5000/buy", {
+      .post("http://backend.neecathon22.xyz/buy", {
         itemList: cart,
         token: supabaseClient.auth.currentSession.access_token,
       })
@@ -71,7 +71,7 @@ const StoreService = {
       quantity: quantity,
     };
     axios
-      .post("http://localhost:5000/requestComponent", {
+      .post("http://backend.neecathon22.xyz/requestComponent", {
         componentObject: obj,
         token: supabaseClient.auth.currentSession.access_token,
       })
